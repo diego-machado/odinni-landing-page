@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { buildJsonLdGraph } from "@/lib/jsonld";
 import { siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
   display: "swap",
   weight: ["300", "400", "500", "700"],
@@ -92,7 +92,7 @@ export default function RootLayout({
 
   return (
     <html lang={siteConfig.language}>
-      <body className={roboto.className}>
+      <body className={montserrat.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
