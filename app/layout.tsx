@@ -66,7 +66,7 @@ export const metadata: Metadata = {
         url: "/assets/phone-header.png",
         width: 1200,
         height: 630,
-        alt: "Previa da plataforma Odinni para organizacao de viagens",
+        alt: "Prévia da plataforma Odinni para organização de viagens",
       },
     ],
   },
@@ -92,6 +92,8 @@ export default function RootLayout({
 
   return (
     <html lang={siteConfig.language}>
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+
       <body className={montserrat.className}>
         <script
           type="application/ld+json"

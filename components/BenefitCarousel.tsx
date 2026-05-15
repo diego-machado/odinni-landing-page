@@ -17,7 +17,7 @@ export function BenefitCarousel({ children }: { children: ReactNode }) {
       <button
         className="carousel-button prev"
         type="button"
-        aria-label="Beneficio anterior"
+        aria-label="Benefício anterior"
         onClick={() => scrollByCard(-1)}
       >
         ‹
@@ -26,14 +26,14 @@ export function BenefitCarousel({ children }: { children: ReactNode }) {
         ref={carouselRef}
         className="benefit-carousel"
         data-carousel
-        aria-label="Beneficios da Odinni"
+        aria-label="Benefícios da Odinni"
       >
         {children}
       </div>
       <button
         className="carousel-button next"
         type="button"
-        aria-label="Proximo beneficio"
+        aria-label="Próximo benefício"
         onClick={() => scrollByCard(1)}
       >
         ›

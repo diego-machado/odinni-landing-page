@@ -4,25 +4,27 @@ const faqItems = [
   {
     question: "O que a Odinni organiza em uma viagem?",
     answer:
-      "A Odinni foi pensada para centralizar roteiros, mapas, voos, hospedagem, vouchers, documentos oficiais e controle financeiro em uma timeline unica.",
+      "A Odinni foi pensada para centralizar roteiros, mapas, voos, hospedagem, vouchers, documentos oficiais e controle financeiro em uma timeline única.",
   },
   {
-    question: "A Odinni serve so para viajantes solo?",
-    answer: "Serve para viajantes solo, casais, familias e grupos pequenos.",
-  },
-  {
-    question: "A plataforma tem inteligencia artificial desde o inicio?",
+    question: "A Odinni serve só para viajantes solo?",
     answer:
-      "Sim. A IA atua como assistente para organizar e priorizar informacoes.",
+      "Serve para viajantes solo, casais, famílias e grupos pequenos.",
   },
   {
-    question: "Qual e o principal diferencial da Odinni?",
+    question: "A plataforma tem inteligência artificial desde o início?",
     answer:
-      "A combinacao de planejamento, timeline, documentos e gastos no mesmo lugar.",
+      "Sim. A IA atua como assistente para organizar e priorizar informações.",
   },
   {
-    question: "Quanto custa para comecar?",
-    answer: "Os planos do esboco partem de R$ 9,90 mensais.",
+    question: "Qual é o principal diferencial da Odinni?",
+    answer:
+      "A combinação de planejamento, timeline, documentos e gastos no mesmo lugar.",
+  },
+  {
+    question: "Quanto custa para começar?",
+    answer:
+      "Os planos vão da R$ 9,90 (Essencial) à R$ 29,90 (Explorer), por mês.",
   },
 ] as const;
 
