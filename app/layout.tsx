@@ -17,6 +17,9 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -29,14 +32,7 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   category: "travel",
-  keywords: [
-    "Odinni",
-    "planejamento de viagem",
-    "timeline de viagem",
-    "roteiro de viagem",
-    "organizar viagem",
-    "IA para viagens",
-  ],
+  keywords: [...siteConfig.keywords],
   robots: {
     index: true,
     follow: true,
@@ -63,10 +59,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/assets/phone-header.png",
-        width: 1200,
-        height: 630,
-        alt: "Prévia da plataforma Odinni para organização de viagens",
+        url: siteConfig.ogImage.url,
+        width: siteConfig.ogImage.width,
+        height: siteConfig.ogImage.height,
+        alt: siteConfig.ogImage.alt,
       },
     ],
   },
@@ -74,13 +70,21 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/assets/phone-header.png"],
+    images: [
+      {
+        url: siteConfig.ogImage.url,
+        alt: siteConfig.ogImage.alt,
+      },
+    ],
   },
   formatDetection: {
     telephone: true,
     email: true,
     address: false,
   },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
 };
 
 export default function RootLayout({
