@@ -3,18 +3,20 @@ import Image from "next/image";
 import { BenefitCarousel } from "@/components/BenefitCarousel";
 import { SiteHeader } from "@/components/SiteHeader";
 import { benefitCarouselSlides } from "@/lib/benefit-carousel";
+import { landingFaqItems } from "@/lib/landing-faq";
 
 const testimonialSlides = [
   {
     name: "Camille Farias",
     imageSrc: "/assets/social/user-03.png",
     quote:
-      "Na hora da viagem ficar procurando os documentos, reservas, mapas era um caos. Agora resolvo tudo em um lugar só. A Odinni é a ferramenta pra quem não tem tempo para perder.",
+      "Eu ficava exausta pulando de aba em aba: voo aqui, hotel lá, passeio em outro... Agora centralizo tudo no Odinni e planejo sem surtar. Que paz! Vale muito a pena!",
   },
   {
     name: "Carlos Costa",
     imageSrc: "/assets/social/user-02.jpg",
-    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    quote:
+      "Na hora da viagem ficar procurando os documentos, reservas, mapas era um caos. Agora resolvo tudo em um lugar só. A Odinni é a ferramenta pra quem não tem tempo para perder.",
   },
   {
     name: "Camila Matos",
@@ -25,9 +27,10 @@ Com o Odinni, além de ser intuitivo e prático, consegui os roteiros com a minh
 Super recomendo e continuarei contratando, pq viajar é tudo de bom!`,
   },
   {
-    name: "Carlos Costa",
-    imageSrc: "/assets/social/user-02.jpg",
-    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    name: "Daniela Leandro",
+    imageSrc: "/assets/social/user-05.jpeg",
+    quote:
+      "Usei a Odinni para fazer o roteiro de minha última viagem e adorei, me poupou inúmeras buscas em sites e conversas com o Chat. Consegui montar o roteiro completo, com todos os links, em um único lugar de forma muita intuitiva, rápida e fácil. Aprovadíssima!!",
   },
   {
     name: "Diego Machado",
@@ -290,43 +293,12 @@ export default function HomePage() {
           </div>
 
           <div className="faq-list">
-            <details open>
-              <summary>O que a Odinni organiza em uma viagem?</summary>
-              <p className="faq-panel">
-                A Odinni foi pensada para centralizar roteiros, mapas, voos,
-                hospedagem, vouchers, documentos oficiais e controle financeiro
-                em uma timeline única.
-              </p>
-            </details>
-            <details>
-              <summary>A Odinni serve só para viajantes solo?</summary>
-              <p className="faq-panel">
-                Serve para viajantes solo, casais, famílias e grupos pequenos.
-              </p>
-            </details>
-            <details>
-              <summary>
-                A plataforma tem inteligência artificial desde o início?
-              </summary>
-              <p className="faq-panel">
-                Sim. A IA atua como assistente para organizar e priorizar
-                informações.
-              </p>
-            </details>
-            <details>
-              <summary>Qual é o principal diferencial da Odinni?</summary>
-              <p className="faq-panel">
-                A combinação de planejamento, timeline, documentos e gastos no
-                mesmo lugar.
-              </p>
-            </details>
-            <details>
-              <summary>Quanto custa para começar?</summary>
-              <p className="faq-panel">
-                Os planos vão da R$ 9,90 (Essencial) à R$ 29,90 (Explorer), por
-                mês.
-              </p>
-            </details>
+            {landingFaqItems.map((item, index) => (
+              <details key={item.question} open={index === 0}>
+                <summary>{item.question}</summary>
+                <p className="faq-panel">{item.answer}</p>
+              </details>
+            ))}
           </div>
         </section>
 
@@ -390,22 +362,9 @@ export default function HomePage() {
         <div>
           <h3>Contatos</h3>
           <p>48 99999-1234</p>
-          <p>email@email.com</p>
-          <p>55.555.555/0001-55</p>
+          <p>odinni.app@gmail.com</p>
+          <p>00.000.000/0001-00</p>
         </div>
-        <form className="newsletter">
-          <h3>Newsletter</h3>
-          <label htmlFor="newsletter-email">
-            <span>Insira seu e-mail aqui</span>
-            <input
-              id="newsletter-email"
-              type="email"
-              placeholder="Insira seu e-mail aqui"
-              autoComplete="email"
-            />
-          </label>
-          <button type="submit">Inscrever</button>
-        </form>
       </footer>
     </>
   );
