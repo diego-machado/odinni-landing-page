@@ -361,7 +361,6 @@ export default function HomePage() {
         </div>
         <div>
           <h3>Contatos</h3>
-          <p>48 99999-1234</p>
           <p>odinni.app@gmail.com</p>
           <p>65.480.118/0001-00</p>
         </div>
